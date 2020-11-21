@@ -61,7 +61,7 @@ public class Employee {
     }
 
     public void insert(String code,String name,String fathername,String situation,String background,int melicode,int salary){
-        try (Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "magh", "magh1379")) {
+        try (Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "nargesmirheydari", "narges1380")) {
             Class.forName("oracle.jdbc.OracleDriver");
             PreparedStatement preparedStatement1= connection.prepareStatement("select * from employee where code=?");
             preparedStatement1.setString(1,code);
@@ -90,7 +90,7 @@ public class Employee {
         }
     }
     public void remove(String code) {
-        try (Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "magh", "magh1379")) {
+        try (Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "nargesmirheydari", "narges1380")) {
             Class.forName("oracle.jdbc.OracleDriver");
             PreparedStatement preparedStatement1 = connection.prepareStatement("select * from employee where code=? ");
             preparedStatement1.setString(1, code);
